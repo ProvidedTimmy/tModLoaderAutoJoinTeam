@@ -1,0 +1,10 @@
+Configs: {
+	Config: {
+		DisplayName: Config
+
+		TeamToJoin: {
+			Label: Team to Auto-Join
+			Tooltip: 0-None, 1-Red, 2-Green, 3-Blue, 4-Yellow, 5-Pink
+		}
+	}
+}
