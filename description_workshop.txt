@@ -1,0 +1,5 @@
+[[h1] TISM's tModLoader Auto Join Team [/h1]
+This mod automatically joins a team when you enter a world. It can be configured to join a specific team in the mod settings.
+It is useful for multiplayer servers where you want to ensure that players are on the same team without having to manually select it each time they join.
+
+This mod is open source and available on [url=https://github.com/ProvidedTimmy/tModLoaderAutoJoinTeam] GitHub. [/url]

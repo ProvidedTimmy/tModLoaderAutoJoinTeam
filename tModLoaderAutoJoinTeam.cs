@@ -1,28 +1,27 @@
-// tModAutoJoinTeam.cs
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace tModAutoJoinTeam
+namespace tModLoaderAutoJoinTeam
 {
-    public class tModAutoJoinTeam : Mod { }
+    public class TModLoaderAutoJoinTeam : Mod { }
 
-    public class tModAutoJoinTeam : ModPlayer
+    public class TModAutoJoinTeam : ModPlayer
     {
-        public override void OnEnterWorld(Player player)
+        public override void OnEnterWorld()
         {
             var cfg = GetInstance<Config>();
             int team = cfg.TeamToJoin;
             if (team < 0 || team > 5) team = 5; // default pink team if out of range
 
-            if (player.team != team)
+            if (Player.team != team)
             {
-                player.team = team;
+                Player.team = team;
 
-                // Sync all players in MP; No packet in SP
+                // Sync all players in MP
                 if (Main.netMode == NetmodeID.MultiplayerClient || Main.netMode == NetmodeID.Server)
-                    NetMessage.SendData(MessageID.PlayerTeam, -1, -1, null, player.whoAmI);
+                    NetMessage.SendData(MessageID.PlayerTeam, -1, -1, null, Player.whoAmI);
             }
         }
     }
