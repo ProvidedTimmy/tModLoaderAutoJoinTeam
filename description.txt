@@ -1,3 +1,2 @@
 Automatically joins a team when joining a world!
-
 You can configure the team color to join in the mod settings.
