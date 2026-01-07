@@ -1,5 +1,5 @@
 displayName = TISM's tModLoader Auto Join Team
 author = ProvidedTimmy
-version = 1.0
+version = 1.0.1
 includeSource = true
 homepage = https://github.com/ProvidedTimmy/tModLoaderAutoJoinTeam
